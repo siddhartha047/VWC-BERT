@@ -1,0 +1,47 @@
+https://pytorch.org/tutorials/intermediate/tensorboard_tutorial.html
+https://pytorch.org/tutorials/intermediate/tensorboard_profiler_tutorial.html
+
+
+pip install torch_tb_profiler
+http://localhost:6006/#pytorch_profiler
+pip install -U tensorboard-plugin-profile
+
+import tensorflow as tf
+import tensorboard as tb
+tf.io.gfile = tb.compat.tensorflow_stub.io.gfile
+
+
+
+ssh -L 16006:127.0.0.1:6006 das90@unimodular.cs.purdue.edu
+
+ssh -N -f -L localhost:16006:localhost:6006 das90@unimodular.cs.purdue.edu -i /.ssh/id_rsa
+
+ssh -i gilbrethkey das90@gilbreth.rcac.purdue.edu  
+
+
+
+ssh -L 16006:127.0.0.1:6006 das90@gilbreth.rcac.purdue.edu
+
+ssh -L 16006:127.0.0.1:6006 -i gilbrethkey das90@gilbreth.rcac.purdue.edu
+
+
+/home/das90/GNNcodes/CVE2020/GNN-NC/CF2022/log
+
+tensorboard --logdir=/home/das90/GNNcodes/CVE2020/GNN-NC/CF2022/log/
+
+ssh -L 16006:127.0.0.1:6006 -i gilbrethkey das90@gilbreth.rcac.purdue.edu
+
+module load anaconda/2020.11-py38
+module load cuda/11.2.0
+module load cudnn/cuda-11.2_8.1
+source activate py38cu11
+
+tensorboard --logdir=/home/das90/GNNcodes/CVE2020/GNN-NC/CF2022/log/
+
+tensorboard --logdir=/home/das90/GNNcodes/CVE2020/GNN-NC/CF2022/tb_logs/
+
+http://localhost:16006/#scalars
+http://localhost:16006/#pytorch_profiler
+
+tensorboard --logdir=./log 
+http://localhost:6006/
